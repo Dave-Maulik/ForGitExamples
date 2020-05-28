@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,12 +24,18 @@ namespace ForGitExamples
             
             try
             {
-                return (i / d) ;
-
+                if (d == 0)
+                    throw new DivideByZeroException();
+                else
+                    return i / d;
             }
-            catch (Exception e)
+            catch (DivideByZeroException)
             {
                 return 0;
+            }
+            finally
+            {
+                Console.WriteLine("In Finally blocks");
             }
         }
     }
