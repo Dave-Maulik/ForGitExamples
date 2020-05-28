@@ -20,7 +20,16 @@ namespace ForGitExamples
 
         public static double Divide(int i,int d)
         {
-            return i / d;
+            
+            try
+            {
+                return (i / d) ;
+
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
         }
     }
 }
