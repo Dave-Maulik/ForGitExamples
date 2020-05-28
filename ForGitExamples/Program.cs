@@ -20,9 +20,10 @@ namespace ForGitExamples
 
         public static double Divide(int i,int d)
         {
+            
             try
             {
-                return i / d;
+                return (i / d) ;
 
             }
             catch (Exception e)
